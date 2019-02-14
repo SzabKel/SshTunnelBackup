@@ -38,7 +38,7 @@ However you will need an SSH user capable of logging into the server. Preferable
 You will need a local folder to save the backups to.
 
 
-# Configuration
+## Configuration
 
 Check the `App.config` (or `[EXE-Name].exe.config` if installed).
 
@@ -70,3 +70,8 @@ Check the `App.config` (or `[EXE-Name].exe.config` if installed).
     -`PG_DBNAME`: The database name you want to backup.
     -`PG_USER`: The PostgreSQL username.
     -`PG_PASSWORD`: The PostgreSQL password.
+    
+ ## Example usage
+ 
+ I had to backup two mysql and one postgresql database, located on different ubuntu servers. I made three backup destinations and created three app folders, where I copied the binaries for each. I configured each one with different config (for the three different servers).
+ I scheduled the execution using [CloudBerry's software](https://www.cloudberrylab.com/backup/server/windows.aspx), which executes the exe's as a Pre-Action job, than reads the destination directory, takes the new files and upload them to Amazon S3.
